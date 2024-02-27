@@ -4,6 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="apple-itunes-app" content="app-id=1174635397, app-argument=ssgdfm://">
 	<title>테스트 HTML</title>
+
+	<script>
+
+		$( document ).ready(function() {
+			console.log("setTimeout");
+			setTimeout(function () {
+				window.location = "https://m-artbox.overpass.co.kr/app/installApp.action?link="
+			}, 2000);
+		});
+		
+	</script>
 </head>
 <body>
 <a href="https://m-artbox.overpass.co.kr/app/installApp.action?link="> 앱 열기 </a>
