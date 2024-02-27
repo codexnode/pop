@@ -9,12 +9,13 @@
 	    $(document).ready(function() {
 			console.log("setTimeout");
 			setTimeout(function(){
-				window.location = "https://m-artbox.overpass.co.kr/app/installApp.action?link="
+				document.getElementById('testLink').click();
+				// window.location = "https://m-artbox.overpass.co.kr/app/installApp.action?link="
 			}, 2000);
 	    });
 	</script>
 </head>
 <body>
-	<a href="https://m-artbox.overpass.co.kr/app/installApp.action?link="> 앱 열기 </a>
+	<a id="testLink" href="https://m-artbox.overpass.co.kr/app/installApp.action?link="> 앱 열기 </a>
 </body>
 </html>
