@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="apple-itunes-app" content="app-id=1174635397, app-argument=ssgdfm://">
-	<title>테스트 HTML</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		document.write("<meta http-equiv='refresh' content='0; url=https://m-artbox.overpass.co.kr/app/installApp.action?link='>");
-	    // $(document).ready(function() {
-		// 	console.log("setTimeout");
-		// 	setTimeout(function(){
-		// 		document.getElementById('testLink').click();
-		// 		// window.location = "https://m-artbox.overpass.co.kr/app/installApp.action?link="
-		// 	}, 2000);
-	    // });
-	</script>
+    <meta charset="utf-8">
+    <meta name="apple-itunes-app" content="app-id=1174635397, app-argument=ssgdfm://">
+    <title>테스트 HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // document.write("<meta http-equiv='refresh' content='0; url=https://m-artbox.overpass.co.kr/app/installApp.action?link='>");
+        // $(document).ready(function() {
+        //  console.log("setTimeout");
+        //  setTimeout(function(){
+        //      document.getElementById('testLink').click();
+        //      // window.location = "https://m-artbox.overpass.co.kr/app/installApp.action?link="
+        //  }, 2000);
+        // });
+    </script>
 </head>
 <body>
-	<a id="testLink" href="https://m-artbox.overpass.co.kr/app/installApp.action?link="> 앱 열기 </a>
+    <a id="testLink" href="https://m-artbox.overpass.co.kr/app/installApp.action?link="> 앱 열기 </a>
+    <script type="text/javascript">
+            window.onload = function() {
+                // Deep link to your app goes here
+                document.getElementById("l").src = "my_app://";
+
+                setTimeout(function() {
+                    // Link to the App Store should go here -- only fires if deep link fails                
+                    window.location = "itms-apps://apple.com/app/id1174635397";
+                }, 500);
+            };
+        </script>
+        <iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
 </body>
 </html>
